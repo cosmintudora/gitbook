@@ -10,6 +10,13 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
+      - name: Test Authentication
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
+          git ls-remote origin
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
