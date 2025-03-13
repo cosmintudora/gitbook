@@ -7,7 +7,7 @@ icon: hand-wave
 EDIT EDIT EDI
 
 
-{% openapi src="[./openapi.yaml](https://api.gitbook.com/openapi.json)" paths="/collections/*" %}
+{% openapi src="[./openapi.yaml](https://api.gitbook.com/openapi.json)" paths="/collections/*" method="GET" %}
 [https://api.gitbook.com/openapi.json](https://api.gitbook.com/openapi.json)
 {% endopenapi %}
 
