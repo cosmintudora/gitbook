@@ -14,6 +14,6 @@ EDIT EDIT EDI
 {% endswagger %}
 
 
-{% openapi src="./openapi.yaml" path="/pet/*" method="put" expanded="true" %} 
+{% openapi src="./openapi.yaml" paths="/pet/*" method="put" expanded="true" %} 
 [openapi.yaml](./openapi.yaml) 
 {% endopenapi %}
