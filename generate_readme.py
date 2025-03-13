@@ -1,8 +1,9 @@
+import yaml  # Import PyYAML
 import json
 
-# Load OpenAPI JSON
+# Load OpenAPI YAML
 with open("openapi.yaml", "r") as f:
-    openapi = json.load(f)
+    openapi = yaml.safe_load(f)  # Convert YAML to Python dictionary
 
 readme_content = "# API Documentation\n\n"
 
