@@ -8,7 +8,7 @@ EDIT EDIT EDI
 
 
 
-{% openapi src="https://api.gitbook.com/openapi.json" path="/spaces/{spaceId}/content/computed/revision" method="post" %}
+{% openapi src="https://api.gitbook.com/openapi.json" %}
 [https://api.gitbook.com/openapi.json](https://api.gitbook.com/openapi.json)
 {% endopenapi %}
 
