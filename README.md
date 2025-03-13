@@ -1,59 +1,9 @@
-# API Documentation
 
-{% openapi src="./openapi.yaml" path="/pet" method="put" expanded="true" %}
-{% endopenapi %}
+Pet API - A Story of Managing Pets
+Imagine a world where pet lovers can easily find and interact with their furry friends through a digital interface. The Pet API is designed to make it possible for pet owners, shelters, and enthusiasts to manage pet information in a seamless way. Whether you're a pet owner looking to adopt a new pet, a shelter needing to manage animals in your care, or a developer creating an app for pet enthusiasts, this API has got you covered!
 
-{% openapi src="./openapi.yaml" path="/pet" method="post" expanded="true" %}
-{% endopenapi %}
+A Day in the Life of a Pet API User
+As a user of the Pet API, you’ll have the power to perform various tasks related to pets. From adding a new pet to the system to checking its health and availability for adoption, the API provides simple and intuitive endpoints to manage the entire lifecycle of a pet.
 
-{% openapi src="./openapi.yaml" path="/pet/findByStatus" method="get" expanded="true" %}
-{% endopenapi %}
 
-{% openapi src="./openapi.yaml" path="/pet/findByTags" method="get" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/pet/{petId}" method="get" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/pet/{petId}" method="post" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/pet/{petId}" method="delete" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/pet/{petId}/uploadImage" method="post" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/store/inventory" method="get" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/store/order" method="post" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/store/order/{orderId}" method="get" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/store/order/{orderId}" method="delete" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/user" method="post" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/user/createWithList" method="post" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/user/login" method="get" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/user/logout" method="get" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/user/{username}" method="get" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/user/{username}" method="put" expanded="true" %}
-{% endopenapi %}
-
-{% openapi src="./openapi.yaml" path="/user/{username}" method="delete" expanded="true" %}
-{% endopenapi %}
-
+{% include "./pets/README.md" %}
