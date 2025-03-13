@@ -1,13 +1,27 @@
+---
+icon: hand-wave
+---
+
 # gitbook
-
-
 
 EDIT EDIT EDI
 
 
-{% swagger src="./openapi.yaml" path"/" expanded="true" %} 
-[openapi.yaml](./openapi.yaml) 
-{% endswagger %}
+
+{% openapi src="https://api.gitbook.com/openapi.json" path="/spaces/{spaceId}/content/computed/revision" method="post" %}
+[https://api.gitbook.com/openapi.json](https://api.gitbook.com/openapi.json)
+{% endopenapi %}
+
+{% openapi src="https://api.gitbook.com/openapi.json" path="/spaces/{spaceId}/content/computed/document" method="post" %}
+[https://api.gitbook.com/openapi.json](https://api.gitbook.com/openapi.json)
+{% endopenapi %}
+
+{% openapi src="https://api.gitbook.com/openapi.json" path="/spaces/{spaceId}/content/reusable-contents/{reusableContentId}" method="get" %}
+[https://api.gitbook.com/openapi.json](https://api.gitbook.com/openapi.json)
+{% endopenapi %}
 
 
-{% swagger src="https://api.gitbook.com/openapi.json" path="/collections/{collectionId}/spaces" method="get" %} https://api.gitbook.com/openapi.json {% endswagger %}
+
+{% openapi src="https://api.gitbook.com/openapi.json" path="/collections/{collectionId}/spaces" method="get" %}
+[https://api.gitbook.com/openapi.json](https://api.gitbook.com/openapi.json)
+{% endopenapi %}
