@@ -1,9 +1,10 @@
-name: Auto Update README from OpenAPI
+name: Update README
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - "openapi.yaml"
+  workflow_dispatch:
 
 jobs:
   update-readme:
