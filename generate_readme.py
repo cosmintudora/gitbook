@@ -1,4 +1,4 @@
-/import yaml  # Import PyYAML
+import yaml  # Import PyYAML
 import json
 
 # Load OpenAPI YAML
