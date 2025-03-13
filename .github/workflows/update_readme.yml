@@ -1,48 +1,37 @@
-name: Update README
+name: Auto Update README from OpenAPI
 
 on:
   push:
-    paths:
-      - "openapi.yaml"
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Test Authentication
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
-        run: |
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
-          git ls-remote origin
-
-      - name: Checkout repository
+      - name: Checkout the repository
         uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: 3.9
 
       - name: Install dependencies
-        run: pip install pyyaml
+        run: |
+          pip install openapi-spec-validator
 
-      - name: Generate README.md
-        run: python generate_readme.py
+      - name: Generate README
+        run: |
+          python generate_readme.py
 
       - name: Commit and push changes
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          echo "Token length: ${#GH_TOKEN}"
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
           git add README.md
           git commit -m "Auto-update README.md from openapi.yaml" || echo "No changes to commit"
-          git push origin HEAD:main
-
-          git commit -m "Auto-update README.md from openapi.yaml" || echo "No changes to commit"
-          git push
-
+          git push origin main
