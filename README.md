@@ -11,6 +11,6 @@ EDIT EDIT EDI
 [https://api.gitbook.com/openapi.json](https://api.gitbook.com/openapi.json)
 {% endopenapi %}
 
-{% swagger src="./openapi.yaml" path="/pet" method="put" expanded="true" %} 
+{% swagger src="[./openapi.yaml]" path="/pet" method="put" expanded="true" %} 
 [openapi.yaml](./openapi.yaml) 
 {% endswagger %}
