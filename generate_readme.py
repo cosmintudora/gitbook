@@ -2,6 +2,8 @@ import yaml  # Import PyYAML
 import json
 
 # Load OpenAPI YAML
+
+# manifest (or anything else file) with a for loop 
 with open("pets/openapi.yaml", "r") as f:
     openapi = yaml.safe_load(f)  # Convert YAML to Python dictionary
 
