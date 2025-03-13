@@ -1,5 +1,9 @@
 walltet  cosmin
 
+
+[./SUMMARY.md]
+
+
 {% openapi src="./openapi.yaml" path="/pet" expanded="true" %} {% endopenapi %}
 
 {% openapi src="./openapi.yaml" path="/pet/findByStatus" expanded="true" %} {% endopenapi %}
