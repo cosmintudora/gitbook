@@ -1,8 +1,8 @@
-import yaml  # Import PyYAML
+/import yaml  # Import PyYAML
 import json
 
 # Load OpenAPI YAML
-with open("openapi.yaml", "r") as f:
+with open("/pets/openapi.yaml", "r") as f:
     openapi = yaml.safe_load(f)  # Convert YAML to Python dictionary
 
 readme_content = "# API Documentation\n\n"
@@ -15,7 +15,7 @@ for path, methods in openapi.get("paths", {}).items():
         readme_content += f"{{% endopenapi %}}\n\n"
 
 # Write the updated README.md
-with open("README.md", "w") as f:
+with open("/pets/README.md", "w") as f:
     f.write(readme_content)
 
 print("README.md updated successfully!")
