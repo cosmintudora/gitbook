@@ -11,3 +11,6 @@ EDIT EDIT EDI
 [https://api.gitbook.com/openapi.json](https://api.gitbook.com/openapi.json)
 {% endopenapi %}
 
+{% swagger src="./openapi.json" path="/collections/{collectionId}" method="get" expanded="true" %} 
+[openapi.json](./openapi.json) 
+{% endswagger %}
