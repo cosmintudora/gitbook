@@ -1,4 +1,3 @@
-# API Documentation
 
 {% openapi src="./openapi.yaml" path="/pet" expanded="true" %}
 {% endopenapi %}
