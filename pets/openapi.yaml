@@ -48,7 +48,7 @@ paths:
     put:
       tags:
         - pet
-      summary: Cosmin is awesome
+      summary: Cosmin is awesome !!!!
       description: Update an existing pet by Id
       operationId: updatePet
       requestBody:
