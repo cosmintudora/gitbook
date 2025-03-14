@@ -3,7 +3,7 @@ name: Update README
 on:
   push:
     paths:
-      - "openapi.yaml"
+      - "pets/openapi.yaml"
   workflow_dispatch:
 
 jobs:
