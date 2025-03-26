@@ -19,7 +19,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'cosmintudora', // Usually your GitHub org/user name.
   projectName: 'gitbook', // Usually your repo name.
-  deploymentBranch: 'main',
+  // deploymentBranch: 'main',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
