@@ -17,14 +17,20 @@ jobs:
         with:
           node-version: 18
 
+      - name: Change to the correct directory
+        run: cd ./my-docs  # Change this if needed
+
       - name: Install dependencies
         run: npm install
+        working-directory: ./my-docs  # Set correct folder
 
       - name: Build Docusaurus site
         run: npm run build
+        working-directory: ./my-docs
 
       - name: Deploy to GitHub Pages
         env:
-          GIT_USER: ${{ secrets.GITHUB_ACTOR }}
+          GIT_USER: github-actions[bot]
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx docusaurus deploy
+        working-directory: ./my-docs
