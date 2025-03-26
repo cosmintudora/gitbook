@@ -35,6 +35,5 @@ jobs:
           # Configure Git with a user to ensure the commit has a name and email
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Push to the gh-pages branch
           npm run deploy
+        working-directory: ./your-docusaurus-folder
