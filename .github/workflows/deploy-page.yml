@@ -34,6 +34,6 @@ jobs:
 
       - name: Deploy to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: GIT_USER="cosmintudora" npm run deploy
+          GIT_PASS: ${{ secrets.GITHUB_TOKEN }}
+        run: GIT_USER="cosmintudora" GIT_PASS=${{ secrets.GITHUB_TOKEN }} npm run deploy
         working-directory: ./my-docs
