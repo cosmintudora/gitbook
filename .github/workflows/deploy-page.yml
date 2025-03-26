@@ -27,13 +27,25 @@ jobs:
         run: npm run build
         working-directory: ./my-docs
 
-      - name: Configure Git user (Optional, but recommended)
+      - name: Configure Git user
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (Manual Git Push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run deploy
-        working-directory: ./my-docs
+        run: |
+          cd ./my-docs/build  # Navigate to the build output directory
+
+          # Initialize a Git repository
+          git init
+
+          # Add the generated files
+          git add .
+
+          # Commit the changes
+          git commit -m "Deploy Docusaurus to GitHub Pages"
+
+          # Push to the gh-pages branch
+          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
