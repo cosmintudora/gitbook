@@ -8,12 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Ensures we fetch all history to prevent issues with git push
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -22,20 +21,19 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./my-docs  # Update this if necessary
+        working-directory: ./my-docs
 
       - name: Build Docusaurus site
         run: npm run build
-        working-directory: ./my-docs  # Update this if necessary
+        working-directory: ./my-docs
 
-      - name: Configure Git user
+      - name: Configure Git user (Optional, but recommended)
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's token
-        run: |
-          npm run deploy  # This should use `docusaurus deploy` to push the build
-        working-directory: ./my-docs  # Update this if necessary
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy
+        working-directory: ./my-docs
