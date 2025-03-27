@@ -1,6 +1,7 @@
----
-icon: hand-wave
----
+
+
+Docusaurus Github page -> https://cosmintudora.github.io/gitbook/ 
+
 
 # gitbook
 
