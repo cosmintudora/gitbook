@@ -1,1 +1,0 @@
-(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[8436],{3290:()=>{},6863:(e,s,a)=>{"use strict";a.r(s),a.d(s,{default:()=>u});a(6540);var c=a(8794),n=a(4848);function u(){return(0,n.jsx)(c.RedocStandalone,{specUrl:"/openapi.yaml"})}},7411:()=>{},7992:()=>{},8825:()=>{}}]);
