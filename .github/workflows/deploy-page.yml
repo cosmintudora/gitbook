@@ -27,7 +27,7 @@ jobs:
         run: npm run build
         working-directory: ./my-docs
 
-      - name: Configure Git user (Optional, but recommended)
+      - name: Configure Git user
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
