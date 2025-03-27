@@ -1,12 +1,15 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type * as Plugin from "@docusaurus/types/src/plugin";
+import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
+
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Cosmin Documentation',
-  tagline: 'What a documentation',
+  title: 'Project Documentation',
+  tagline: 'This is a well-documented project',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -39,6 +42,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -70,7 +75,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Cosmin Documentation',
+      title: 'Project Documentation',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -80,7 +85,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -142,6 +147,27 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
 
+
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: "api", // plugin id
+        docsPluginId: "classic", // configured for preset-classic
+        config: {
+          petstore: {
+            specPath: "openapi.yaml",
+            outputDir: "docs/PetStoreOpenAPI",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+        }
+      },
+    ]
+  ],
+
+  themes: ["docusaurus-theme-openapi-docs"]
 };
 
 export default config;
