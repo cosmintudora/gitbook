@@ -157,7 +157,7 @@ const config: Config = {
         config: {
           petstore: {
             specPath: "openapi.yaml",
-            outputDir: "docs/PetStoreOpenAPI",
+            outputDir: "my-docs/PetStoreOpenAPI",
             sidebarOptions: {
               groupPathsBy: "tag",
             },
