@@ -4,7 +4,7 @@ const sidebar: SidebarsConfig = {
   apisidebar: [
     {
       type: "doc",
-      id: "openapi/swagger-petstore-openapi-3-0",
+      id: "PetStoreOpenAPI/swagger-petstore-openapi-3-0",
     },
     {
       type: "category",
@@ -12,49 +12,49 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "openapi/update-pet",
+          id: "PetStoreOpenAPI/update-pet",
           label: "Update an existing pet",
           className: "api-method put",
         },
         {
           type: "doc",
-          id: "openapi/add-pet",
+          id: "PetStoreOpenAPI/add-pet",
           label: "Add a new pet to the store",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "openapi/find-pets-by-status",
+          id: "PetStoreOpenAPI/find-pets-by-status",
           label: "Finds Pets by status",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "openapi/find-pets-by-tags",
+          id: "PetStoreOpenAPI/find-pets-by-tags",
           label: "Finds Pets by tags",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "openapi/get-pet-by-id",
+          id: "PetStoreOpenAPI/get-pet-by-id",
           label: "Find pet by ID",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "openapi/update-pet-with-form",
+          id: "PetStoreOpenAPI/update-pet-with-form",
           label: "Updates a pet in the store with form data",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "openapi/delete-pet",
+          id: "PetStoreOpenAPI/delete-pet",
           label: "Deletes a pet",
           className: "api-method delete",
         },
         {
           type: "doc",
-          id: "openapi/upload-file",
+          id: "PetStoreOpenAPI/upload-file",
           label: "uploads an image",
           className: "api-method post",
         },
@@ -66,25 +66,25 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "openapi/get-inventory",
+          id: "PetStoreOpenAPI/get-inventory",
           label: "Returns pet inventories by status",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "openapi/place-order",
+          id: "PetStoreOpenAPI/place-order",
           label: "Place an order for a pet",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "openapi/get-order-by-id",
+          id: "PetStoreOpenAPI/get-order-by-id",
           label: "Find purchase order by ID",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "openapi/delete-order",
+          id: "PetStoreOpenAPI/delete-order",
           label: "Delete purchase order by ID",
           className: "api-method delete",
         },
@@ -96,43 +96,43 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "openapi/create-user",
+          id: "PetStoreOpenAPI/create-user",
           label: "Create user",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "openapi/create-users-with-list-input",
+          id: "PetStoreOpenAPI/create-users-with-list-input",
           label: "Creates list of users with given input array",
           className: "api-method post",
         },
         {
           type: "doc",
-          id: "openapi/login-user",
+          id: "PetStoreOpenAPI/login-user",
           label: "Logs user into the system",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "openapi/logout-user",
+          id: "PetStoreOpenAPI/logout-user",
           label: "Logs out current logged in user session",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "openapi/get-user-by-name",
+          id: "PetStoreOpenAPI/get-user-by-name",
           label: "Get user by user name",
           className: "api-method get",
         },
         {
           type: "doc",
-          id: "openapi/update-user",
+          id: "PetStoreOpenAPI/update-user",
           label: "Update user",
           className: "api-method put",
         },
         {
           type: "doc",
-          id: "openapi/delete-user",
+          id: "PetStoreOpenAPI/delete-user",
           label: "Delete user",
           className: "api-method delete",
         },
